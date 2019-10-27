@@ -25,10 +25,10 @@ which will be recieving via OTG USB the digital signal converted by te board.
 
 ## roboremo-interface.interface
 
-The RoboRemo app interface allows to read, visualize and save in the Smartphone the digital signal provided by the
+The RoboRemo app interface allows the Smartphone to read, visualize and save the data from the digital signal provided by the
 Arduino/Genuino board.  
 
-The steps to import the interface are:
+The steps to import the interface into the Smartphone are:
 1. Copy the interface file to the RoboRemo app folder on the Smartphone
 2. Open RoboRemo app in the Smartphone
 3. Select menu -> interface -> import

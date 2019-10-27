@@ -1,10 +1,9 @@
+//1. Set the Arduino off as Default value when connection starts.
 
 int on = 0; // off
 
-
 char cmd[100];
 int cmdIndex;
-
 
 boolean cmdStartsWith(char *st) {
   for(int i=0; ; i++) {

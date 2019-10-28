@@ -16,8 +16,8 @@ with them.*
 The Arduino-code.ino must be compiled and uploaded to an Arduino/Genuino UNO Board using the Arduino IDE.
 (https://www.arduino.cc/en/main/howto)
 
-When the code is compiled and uploaded, the board can be used to perform an experimentation where an analog signal between
-**-1V and +1V** (it is important to not overpass this boundaries) is provided to the **analog pin A0**. 
+Once the code is compiled and uploaded, the board will get the function of measuring analog signals between
+**-1V and +1V** (it is important to not overpass this boundaries) which will be provided by the **analog pin A0**. 
 
 Also, the code allows to communicate the board with the application RoboRemo app installed on a Smartphone
 which will be recieving via OTG USB the digital signal converted by te board.

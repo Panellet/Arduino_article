@@ -24,18 +24,17 @@ void exeCmd() {
      
 }
 
-//3. Initiating the USB OTG Serial communication protocol between Arduino/Genuino and the RoboRemo app.
+//3. Defining the USB OTG Serial communication protocol between Arduino/Genuino and the RoboRemo app.
 
 void setup() {
   
   delay(500); 
 
-  Serial.begin(115200); //This value corresponds to the speed in bits per second (baud). 
+  Serial.begin(115200); //This value corresponds to the speed in bits per second (baud) defined in the roboremo-interface.interface.
+  //This value must match both the interface and the board code.
   
   cmdIndex = 0;
 }
-
-//4. Defining variables to allow communication between the Arduino/Genuino board and the RoboRemo app.
 
 void loop() {
   
@@ -45,8 +44,8 @@ void loop() {
     
     if(c=='\n') {
       cmd[cmdIndex] = 0;
-      exeCmd();  // execute the command
-      cmdIndex = 0; // reset the cmdIndex
+      exeCmd(); 
+      cmdIndex = 0;
     } else {      
       cmd[cmdIndex] = c;
       if(cmdIndex<99) cmdIndex++;
@@ -54,7 +53,7 @@ void loop() {
     
   }
   
-//5.   
+//4. Defining protocol to read the data and print it on the RoboRemo app via Serial communication.  
   
   if(on) {
     int val = analogRead(A0); //Sets the A0 pin in Arduino/Genuino Board as the input pin.
